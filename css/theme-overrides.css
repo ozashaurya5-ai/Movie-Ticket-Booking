@@ -1,0 +1,185 @@
+/* THEME OVERRIDE: White / Light Theme
+   Add this file after existing CSS (e.g., <link rel="stylesheet" href="css/theme-overrides.css">)
+   This file intentionally *overrides* colors without removing existing classes or layout.
+   Keep layout intact; only color / small UI polishing (shadows, soft borders, button styles).
+*/
+
+/* Base */
+html, body {
+  background: #ffffff !important;
+  color: #111827 !important; /* dark text */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Common containers */
+.container, .wrapper, .main, .content {
+  background: transparent !important;
+}
+
+/* Navbars / headers */
+.navbar, header, .site-header, .topbar, .main-header {
+  background: #ffffff !important;
+  color: #0f172a !important;
+  border-bottom: 1px solid rgba(15,23,42,0.06) !important;
+  box-shadow: 0 1px 6px rgba(2,6,23,0.06) !important;
+}
+
+/* Links */
+a, a:link, a:visited {
+  color: #0b63ff !important;
+}
+a:hover, a:focus {
+  color: #0846c6 !important;
+  text-decoration: underline;
+}
+
+/* Cards and panels */
+.card, .panel, .movie-card, .box {
+  background: #ffffff !important;
+  border: 1px solid rgba(15,23,42,0.06) !important;
+  box-shadow: 0 6px 18px rgba(2,6,23,0.06) !important;
+  color: #0f172a !important;
+}
+
+/* Footers */
+footer, .site-footer {
+  background: #f8fafc !important;
+  color: #475569 !important;
+  border-top: 1px solid rgba(15,23,42,0.04) !important;
+}
+
+/* Buttons */
+button, .btn, .btn-primary, .btn-submit {
+  background: linear-gradient(180deg,#0b63ff 0%,#0846c6 100%) !important;
+  color: #fff !important;
+  border: none !important;
+  box-shadow: 0 6px 18px rgba(11,99,255,0.14) !important;
+}
+.btn-secondary {
+  background: #e6eefc !important;
+  color: #0b63ff !important;
+  border: 1px solid rgba(11,99,255,0.12) !important;
+}
+
+/* Forms & inputs */
+input, textarea, select {
+  background: #ffffff !important;
+  color: #0f172a !important;
+  border: 1px solid rgba(15,23,42,0.08) !important;
+  box-shadow: none !important;
+}
+input::placeholder, textarea::placeholder { color: rgba(15,23,42,0.4) !important; }
+
+/* Tables */
+table {
+  background: transparent !important;
+  color: #0f172a !important;
+}
+table thead th {
+  background: #f1f5f9 !important;
+  color: #0f172a !important;
+  border-bottom: 1px solid rgba(15,23,42,0.06) !important;
+}
+
+/* Modals */
+.modal-content, .popup, .dialog {
+  background: #ffffff !important;
+  color: #0f172a !important;
+  box-shadow: 0 20px 60px rgba(2,6,23,0.12) !important;
+}
+
+/* Images with dark overlay */
+.overlay-dark {
+  background: linear-gradient(0deg, rgba(255,255,255,0.3), rgba(255,255,255,0.0)) !important;
+}
+
+/* Typography tweaks */
+h1,h2,h3,h4,h5,h6 {
+  color: #0f172a !important;
+  font-weight: 600;
+}
+p, li, span, label {
+  color: #334155 !important;
+}
+
+/* Small UI polish */
+.btn, .card, .input, .form-control {
+  border-radius: 10px !important;
+}
+
+/* Ensure any explicit black backgrounds are reset */
+.bg-dark, .bg-black, .text-white {
+  background: transparent !important;
+  color: inherit !important;
+}
+
+/* Specific fixes for commonly-named classes */
+.header-dark, .navbar-dark, .footer-dark, .theme-dark {
+  background: transparent !important;
+  color: inherit !important;
+}
+
+/* Fallback high-specificity catch-all (last resort) */
+body * {
+  --_user_bg: unset;
+}
+
+/* END of overrides */
+
+/* --- Button Text Visibility Fix (Light Theme) --- */
+/* === FINAL BUTTON TEXT VISIBILITY FIX === */
+
+/* handles <a class="book-btn"> links AND button elements */
+a.book-btn,
+a.book-btn:link,
+a.book-btn:visited,
+.book-btn,
+button,
+.btn {
+  background-color: #0b63ff !important;      /* solid blue background   */
+  color: #ffffff !important;                 /* bright white text       */
+  font-weight: 600;
+  text-shadow: 0 1px 2px rgba(0,0,0,0.2);
+  border: none !important;
+}
+
+/* Hover / focus states */
+a.book-btn:hover,
+.book-btn:hover,
+button:hover,
+.btn:hover,
+a.book-btn:focus,
+button:focus {
+  background-color: #0846c6 !important;      /* darker blue hover       */
+  color: #ffffff !important;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 10px rgba(11,99,255,0.25);
+}
+
+/* make sure text inside <a> inherits white */
+a.book-btn span,
+a.book-btn strong,
+.book-btn span {
+  color: #ffffff !important;
+}
+
+
+/* === Navbar username text visible fix === */
+.navbar-right .location-dropdown {
+  color: #0f172a !important;        /* dark text for light theme */
+  font-weight: 600;
+  background: #ffffff;
+  padding: 6px 14px;
+  border-radius: 20px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.08);
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+.navbar-right .location-dropdown:hover {
+  background: #f1f5ff;
+}
+
+
+
